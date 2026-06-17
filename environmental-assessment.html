@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Environmental &amp; Social Assessment – Horn Mark Design Consultant Ltd.</title>
+<link rel="stylesheet" href="./Runji Consulting Group – Engineering &amp; Project Management_files/font-awesome.min.css">
+<link rel="stylesheet" href="./Runji Consulting Group – Engineering &amp; Project Management_files/bootstrap.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1B2F5E;--navy-dark:#122040;--green:#2E7D32;--green-light:#4CAF50;--gray-light:#F4F6F9;--gray-mid:#B0BEC5;--white:#FFFFFF;--text-dark:#1A1A2E;--text-body:#444;--shadow-sm:0 2px 12px rgba(27,47,94,0.08);--shadow-md:0 6px 28px rgba(27,47,94,0.14);--radius:8px;--transition:all 0.3s ease}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--text-body);background:var(--white);line-height:1.7;font-size:16px}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit;transition:var(--transition)}
+ul{list-style:none}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
+.section-pad{padding:90px 0}.section-pad-sm{padding:60px 0}
+.section-tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--green);margin-bottom:12px}
+.section-title{font-family:'Montserrat',sans-serif;font-size:clamp(26px,3.5vw,40px);font-weight:800;color:var(--navy);line-height:1.2;margin-bottom:16px}
+.section-lead{font-size:17px;color:var(--text-body);max-width:640px;margin-bottom:48px}
+.divider{width:56px;height:4px;background:linear-gradient(90deg,var(--navy),var(--green));border-radius:2px;margin-bottom:24px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:var(--radius);font-weight:600;font-size:14px;cursor:pointer;border:2px solid transparent;transition:var(--transition)}
+.btn-primary{background:var(--green);color:var(--white);border-color:var(--green)}
+.btn-primary:hover{background:var(--green-light);border-color:var(--green-light);color:var(--white);transform:translateY(-2px);box-shadow:0 8px 20px rgba(46,125,50,0.3)}
+.btn-navy{background:var(--navy);color:var(--white);border-color:var(--navy)}
+.btn-navy:hover{background:var(--navy-dark);transform:translateY(-2px)}
+.btn-outline-white{background:transparent;color:var(--white);border:2px solid var(--white)}
+.btn-outline-white:hover{background:var(--white);color:var(--navy);transform:translateY(-2px)}
+.top-bar{background:var(--navy-dark);color:rgba(255,255,255,.75);font-size:13px;padding:8px 0}
+.top-bar .container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.top-bar-left{display:flex;align-items:center;gap:24px}
+.top-bar-left span{display:flex;align-items:center;gap:6px}
+.top-bar-left i{color:var(--green-light)}
+.top-bar-right{display:flex;gap:12px}
+.top-bar-right a{width:28px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.8);font-size:13px;transition:var(--transition)}
+.top-bar-right a:hover{background:var(--green);color:var(--white)}
+.site-header{background:var(--white);box-shadow:var(--shadow-sm);position:sticky;top:0;z-index:1000}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo-wrap img{height:70px;width:auto}
+.main-nav{display:flex;align-items:center;gap:4px}
+.main-nav>li{position:relative}
+.main-nav>li>a{display:block;padding:10px 16px;font-weight:600;font-size:14px;color:var(--text-dark);border-radius:var(--radius);transition:var(--transition)}
+.main-nav>li>a:hover,.main-nav>li.active>a{color:var(--green);background:rgba(46,125,50,.07)}
+.main-nav>li>a i{margin-right:4px;font-size:12px}
+.main-nav .dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:240px;background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow-md);padding:8px 0;border-top:3px solid var(--green);z-index:100}
+.main-nav .dropdown:hover .dropdown-menu{display:block}
+.main-nav .dropdown-menu li a{display:block;padding:10px 20px;font-size:14px;color:var(--text-dark);transition:var(--transition)}
+.main-nav .dropdown-menu li a:hover,.main-nav .dropdown-menu li a.active-sub{color:var(--green);background:var(--gray-light);padding-left:26px}
+.nav-cta{margin-left:16px}
+.nav-toggle{display:none;background:none;border:none;font-size:22px;color:var(--navy);cursor:pointer}
+.page-hero{background:linear-gradient(135deg,#0d2b1a 0%,#1a4d22 50%,var(--navy) 100%);color:var(--white);padding:80px 0 70px;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400"><circle cx="650" cy="80" r="240" fill="rgba(255,255,255,0.04)"/></svg>') no-repeat center/cover}
+.page-hero .container{position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.6);margin-bottom:20px}
+.breadcrumb a{color:rgba(255,255,255,.6)}.breadcrumb a:hover{color:var(--green-light)}.breadcrumb span{color:var(--green-light)}.breadcrumb i{font-size:10px}
+.page-hero h1{font-family:'Montserrat',sans-serif;font-size:clamp(28px,4vw,50px);font-weight:800;line-height:1.1;margin-bottom:20px}
+.page-hero h1 span{color:var(--green-light)}
+.page-hero p{font-size:17px;color:rgba(255,255,255,.82);max-width:620px;line-height:1.8;margin-bottom:32px}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(46,125,50,.2);border:1px solid rgba(76,175,80,.4);color:var(--green-light);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:20px}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.intro-content p{color:var(--text-body);line-height:1.85;margin-bottom:20px;font-size:15.5px}
+.info-box{background:var(--gray-light);border-left:4px solid var(--green);border-radius:0 var(--radius) var(--radius) 0;padding:24px 28px;margin-top:28px}
+.info-box h4{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:var(--green);margin-bottom:10px;text-transform:uppercase;letter-spacing:1px}
+.info-box p{font-size:14px;color:var(--text-body);margin:0;line-height:1.7}
+.sidebar-card{background:var(--navy);border-radius:12px;padding:32px;color:var(--white);position:sticky;top:100px}
+.sidebar-card h3{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:700;margin-bottom:20px}
+.sidebar-card ul{display:flex;flex-direction:column;gap:12px}
+.sidebar-card ul li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(255,255,255,.8);line-height:1.5}
+.sidebar-card ul li i{color:var(--green-light);flex-shrink:0;margin-top:3px}
+.sidebar-cta{margin-top:24px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12)}
+.sidebar-cta p{font-size:13px;color:rgba(255,255,255,.65);margin-bottom:14px}
+.deliverables{background:var(--gray-light)}
+.del-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.del-card{background:var(--white);border-radius:12px;padding:28px;box-shadow:var(--shadow-sm);transition:var(--transition);border-top:3px solid transparent}
+.del-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);border-top-color:var(--green)}
+.del-icon{width:52px;height:52px;background:linear-gradient(135deg,var(--green),var(--green-light));border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;transition:var(--transition)}
+.del-card:hover .del-icon{background:linear-gradient(135deg,var(--navy),#2a4a8a)}
+.del-icon i{color:var(--white);font-size:20px}
+.del-card h4{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.del-card p{font-size:13px;color:var(--text-body);line-height:1.6}
+.standards-section{background:var(--white)}
+.standards-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.standard-card{background:var(--gray-light);border-radius:12px;padding:24px;display:flex;align-items:flex-start;gap:16px;transition:var(--transition);border:1px solid transparent}
+.standard-card:hover{background:var(--white);box-shadow:var(--shadow-sm);border-color:rgba(46,125,50,.2)}
+.standard-icon{width:48px;height:48px;background:var(--green);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.standard-icon i{color:var(--white);font-size:18px}
+.standard-card h4{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px}
+.standard-card p{font-size:13px;color:var(--text-body);line-height:1.6}
+.cta-band{background:linear-gradient(135deg,var(--green) 0%,var(--green-light) 100%);padding:70px 0;text-align:center}
+.cta-band h2{font-family:'Montserrat',sans-serif;font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--white);margin-bottom:14px}
+.cta-band p{color:rgba(255,255,255,.9);font-size:16px;margin-bottom:32px;max-width:520px;margin-left:auto;margin-right:auto}
+.site-footer{background:var(--navy-dark);color:rgba(255,255,255,.75);padding:72px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:56px}
+.footer-brand img{height:65px;width:auto;margin-bottom:20px}
+.footer-brand p{font-size:14px;line-height:1.8;color:rgba(255,255,255,.65);margin-bottom:24px;max-width:300px}
+.footer-social{display:flex;gap:10px}
+.footer-social a{width:36px;height:36px;background:rgba(255,255,255,.08);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);font-size:14px;transition:var(--transition)}
+.footer-social a:hover{background:var(--green);color:var(--white)}
+.footer-col h4{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:var(--white);letter-spacing:1px;text-transform:uppercase;margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid var(--green);display:inline-block}
+.footer-col ul{display:flex;flex-direction:column;gap:10px}
+.footer-col ul li a{font-size:14px;color:rgba(255,255,255,.65);display:flex;align-items:center;gap:8px;transition:var(--transition)}
+.footer-col ul li a::before{content:'›';color:var(--green-light);font-size:16px;line-height:1}
+.footer-col ul li a:hover{color:var(--green-light);padding-left:4px}
+.footer-contact li{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:rgba(255,255,255,.65)}
+.footer-contact li i{color:var(--green-light);margin-top:2px;flex-shrink:0;width:16px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:20px 0}
+.footer-bottom .container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-bottom p{font-size:13px;color:rgba(255,255,255,.45)}
+.footer-bottom-links{display:flex;gap:20px}
+.footer-bottom-links a{font-size:13px;color:rgba(255,255,255,.45);transition:var(--transition)}
+.footer-bottom-links a:hover{color:var(--green-light)}
+@media(max-width:992px){.intro-grid{grid-template-columns:1fr;gap:40px}.sidebar-card{position:static}.del-grid{grid-template-columns:1fr 1fr}.standards-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.top-bar-left span:not(:first-child){display:none}.main-nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--white);padding:16px;box-shadow:var(--shadow-md);gap:0}.main-nav.open{display:flex}.main-nav .dropdown-menu{position:static;box-shadow:none;border:none;background:var(--gray-light);padding-left:16px;display:none}.main-nav .dropdown.open .dropdown-menu{display:block}.nav-toggle{display:block}.nav-cta{display:none}.site-header{position:relative}.del-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left">
+      <span><i class="fa fa-map-marker"></i> Mogadishu, Somalia</span>
+      <span><i class="fa fa-phone"></i> +252 61 000 0000</span>
+      <span><i class="fa fa-envelope"></i> info@hornmarkdesign.com</span>
+    </div>
+    <div class="top-bar-right">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo-wrap"><a href="hornmark.html"><img src="Picture2.png" alt="Horn Mark Design Consultant Ltd."></a></div>
+      <button class="nav-toggle" id="navToggle"><i class="fa fa-bars"></i></button>
+      <nav>
+        <ul class="main-nav" id="mainNav">
+          <li><a href="hornmark.html">Home</a></li>
+          <li><a href="hornmark.html#about">About Us</a></li>
+          <li class="dropdown active">
+            <a href="hornmark.html#services">Our Services <i class="fa fa-angle-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="engineering-consultancy.html">Engineering Consultancy</a></li>
+              <li><a href="environmental-assessment.html" class="active-sub">Environmental &amp; Social Assessment</a></li>
+              <li><a href="construction-management.html">Construction Management</a></li>
+              <li><a href="project-management.html">Project Management</a></li>
+              <li><a href="monitoring-evaluation.html">Monitoring &amp; Evaluation</a></li>
+              <li><a href="risk-assessment.html">Risk Assessment</a></li>
+              <li><a href="bim-digital-engineering.html">BIM &amp; Digital Engineering</a></li>
+            </ul>
+          </li>
+          <li><a href="hornmark.html#why-us">Why Choose Us</a></li>
+          <li><a href="hornmark.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="hornmark.html#contact" class="btn btn-primary nav-cta">Get In Touch</a>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="hornmark.html">Home</a><i class="fa fa-angle-right"></i>
+      <a href="hornmark.html#services">Our Services</a><i class="fa fa-angle-right"></i>
+      <span>Environmental &amp; Social Assessment</span>
+    </div>
+    <div class="hero-tag"><i class="fa fa-leaf"></i> Core Service</div>
+    <h1>Environmental &amp; <span>Social Assessment</span></h1>
+    <p>Supporting sustainable development through comprehensive environmental and social advisory services that meet international safeguard standards and protect communities and ecosystems.</p>
+    <a href="hornmark.html#contact" class="btn btn-primary"><i class="fa fa-envelope"></i> Request a Proposal</a>
+  </div>
+</section>
+
+<section class="section-pad" style="background:var(--white)">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="intro-content">
+        <span class="section-tag">Overview</span>
+        <h2 class="section-title">Safeguarding People &amp; Environment</h2>
+        <div class="divider"></div>
+        <p>Horn Mark Design Consultant Ltd. provides comprehensive Environmental and Social Assessment (ESA) services to support sustainable project development across Somalia and the Horn of Africa. Our environmental and social specialists ensure that projects meet international safeguard requirements while protecting local communities, ecosystems, and natural resources.</p>
+        <p>We support clients from the earliest stages of project planning through implementation and beyond, providing Environmental and Social Impact Assessments (ESIA), Environmental Management Plans (EMP), Resettlement Action Plans (RAP), stakeholder engagement processes, and ongoing environmental and social monitoring.</p>
+        <p>HMD's environmental team has expertise in World Bank Environmental and Social Framework (ESF), IFC Performance Standards, African Development Bank Integrated Safeguards System, and European Union Environmental Directives — ensuring full compliance for internationally financed projects.</p>
+        <div class="info-box">
+          <h4><i class="fa fa-globe" style="margin-right:6px;color:var(--green)"></i> International Framework Compliance</h4>
+          <p>All HMD environmental and social assessments are prepared in compliance with the World Bank ESF (2018), IFC Performance Standards, AfDB Integrated Safeguards System, and applicable Somali national environmental regulations.</p>
+        </div>
+      </div>
+      <div>
+        <div class="sidebar-card">
+          <h3><i class="fa fa-list-ul" style="margin-right:10px;color:var(--green-light)"></i> Service Scope</h3>
+          <ul>
+            <li><i class="fa fa-check-circle"></i> Environmental &amp; Social Impact Assessment (ESIA)</li>
+            <li><i class="fa fa-check-circle"></i> Strategic Environmental Assessment (SEA)</li>
+            <li><i class="fa fa-check-circle"></i> Environmental Management Plans (EMP)</li>
+            <li><i class="fa fa-check-circle"></i> Resettlement Action Plans (RAP)</li>
+            <li><i class="fa fa-check-circle"></i> Stakeholder Engagement Plans (SEP)</li>
+            <li><i class="fa fa-check-circle"></i> Grievance Redress Mechanisms</li>
+            <li><i class="fa fa-check-circle"></i> Climate Change Risk Assessment</li>
+            <li><i class="fa fa-check-circle"></i> Biodiversity &amp; Ecosystem Assessments</li>
+            <li><i class="fa fa-check-circle"></i> Environmental &amp; Social Audits</li>
+            <li><i class="fa fa-check-circle"></i> E&amp;S Monitoring &amp; Reporting</li>
+          </ul>
+          <div class="sidebar-cta">
+            <p>Need environmental &amp; social advisory for your project?</p>
+            <a href="hornmark.html#contact" class="btn btn-primary" style="width:100%;justify-content:center;"><i class="fa fa-envelope"></i> Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="deliverables section-pad-sm">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px;">
+      <span class="section-tag">Key Deliverables</span>
+      <h2 class="section-title" style="max-width:500px;margin:0 auto 12px;">Assessment Outputs</h2>
+      <div class="divider" style="margin:0 auto;"></div>
+    </div>
+    <div class="del-grid">
+      <div class="del-card">
+        <div class="del-icon"><i class="fa fa-file-text-o"></i></div>
+        <h4>ESIA Reports</h4>
+        <p>Full Environmental and Social Impact Assessment reports identifying, evaluating, and proposing mitigation measures for project impacts.</p>
+      </div>
+      <div class="del-card">
+        <div class="del-icon"><i class="fa fa-tasks"></i></div>
+        <h4>Environmental Management Plans</h4>
+        <p>Comprehensive EMPs detailing mitigation, monitoring, roles, responsibilities, and budgets for managing environmental and social risks.</p>
+      </div>
+      <div class="del-card">
+        <div class="del-icon"><i class="fa fa-home"></i></div>
+        <h4>Resettlement Action Plans</h4>
+        <p>RAPs that protect the rights of project-affected persons, ensuring fair compensation and livelihood restoration in line with IFC PS5 / World Bank OP 4.12.</p>
+      </div>
+      <div class="del-card">
+        <div class="del-icon"><i class="fa fa-users"></i></div>
+        <h4>Stakeholder Engagement Plans</h4>
+        <p>SEPs and consultation records documenting meaningful engagement with affected communities, authorities, and other stakeholders.</p>
+      </div>
+      <div class="del-card">
+        <div class="del-icon"><i class="fa fa-thermometer-half"></i></div>
+        <h4>Climate Risk Assessments</h4>
+        <p>Analysis of climate-related risks and vulnerabilities affecting project design, operations, and long-term sustainability.</p>
+      </div>
+      <div class="del-card">
+        <div class="del-icon"><i class="fa fa-bar-chart"></i></div>
+        <h4>E&amp;S Monitoring Reports</h4>
+        <p>Periodic monitoring reports tracking environmental and social compliance during construction and operation phases.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="standards-section section-pad">
+  <div class="container">
+    <div style="margin-bottom:48px;">
+      <span class="section-tag">Standards &amp; Frameworks</span>
+      <h2 class="section-title">International Safeguard Standards We Apply</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="standards-grid">
+      <div class="standard-card">
+        <div class="standard-icon"><i class="fa fa-globe"></i></div>
+        <div>
+          <h4>World Bank Environmental &amp; Social Framework (ESF 2018)</h4>
+          <p>Full application of the ten Environmental and Social Standards (ESS1–ESS10) for World Bank-financed operations, including E&amp;S assessment, labor conditions, resource efficiency, community health, and cultural heritage.</p>
+        </div>
+      </div>
+      <div class="standard-card">
+        <div class="standard-icon"><i class="fa fa-building"></i></div>
+        <div>
+          <h4>IFC Performance Standards (PS1–PS8)</h4>
+          <p>Compliance with International Finance Corporation Performance Standards covering assessment, labour rights, resource efficiency, community health, land acquisition, biodiversity, indigenous peoples, and cultural heritage.</p>
+        </div>
+      </div>
+      <div class="standard-card">
+        <div class="standard-icon"><i class="fa fa-university"></i></div>
+        <div>
+          <h4>African Development Bank — Integrated Safeguards System</h4>
+          <p>Application of AfDB's Integrated Safeguards System for projects financed by the African Development Bank, including operational safeguard policies on environmental, involuntary resettlement, and biodiversity standards.</p>
+        </div>
+      </div>
+      <div class="standard-card">
+        <div class="standard-icon"><i class="fa fa-leaf"></i></div>
+        <div>
+          <h4>Somali National Environmental Policy</h4>
+          <p>Compliance with applicable Somali national environmental legislation and Ministry of Environment requirements, integrated with international best practices for projects operating within Somalia.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container">
+    <h2>Protect Your Project. Protect Communities.</h2>
+    <p>Let HMD's environmental and social specialists guide your project to full safeguard compliance and sustainable outcomes.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="hornmark.html#contact" class="btn btn-outline-white"><i class="fa fa-envelope"></i> Get In Touch</a>
+      <a href="hornmark.html#services" class="btn btn-navy"><i class="fa fa-th-large"></i> All Services</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="hornmark.html"><img src="Picture2.png" alt="Horn Mark Design Consultant Ltd."></a>
+        <p>A multidisciplinary engineering and consulting firm headquartered in Mogadishu, Somalia. Delivering innovative, sustainable, and cost-effective solutions across the Horn of Africa since 2018.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Our Services</h4>
+        <ul>
+          <li><a href="engineering-consultancy.html">Engineering Consultancy</a></li>
+          <li><a href="environmental-assessment.html">Environmental &amp; Social Assessment</a></li>
+          <li><a href="construction-management.html">Construction Management</a></li>
+          <li><a href="project-management.html">Project Management</a></li>
+          <li><a href="monitoring-evaluation.html">Monitoring &amp; Evaluation</a></li>
+          <li><a href="risk-assessment.html">Risk Assessment</a></li>
+          <li><a href="bim-digital-engineering.html">BIM &amp; Digital Engineering</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <ul class="footer-contact">
+          <li><i class="fa fa-map-marker"></i> Mogadishu, Somalia</li>
+          <li><i class="fa fa-phone"></i> +252 61 000 0000</li>
+          <li><i class="fa fa-envelope"></i> info@hornmarkdesign.com</li>
+          <li><i class="fa fa-globe"></i> www.hornmarkdesign.com</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; 2025 Horn Mark Design Consultant Ltd. All rights reserved.</p>
+      <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+    </div>
+  </div>
+</footer>
+<script>
+const navToggle=document.getElementById('navToggle');const mainNav=document.getElementById('mainNav');
+navToggle.addEventListener('click',()=>mainNav.classList.toggle('open'));
+document.querySelectorAll('.main-nav .dropdown>a').forEach(l=>l.addEventListener('click',e=>{if(window.innerWidth<=768){e.preventDefault();l.parentElement.classList.toggle('open');}}));
+</script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Risk Assessment &amp; Management – Horn Mark Design Consultant Ltd.</title>
+<link rel="stylesheet" href="./Runji Consulting Group – Engineering &amp; Project Management_files/font-awesome.min.css">
+<link rel="stylesheet" href="./Runji Consulting Group – Engineering &amp; Project Management_files/bootstrap.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1B2F5E;--navy-dark:#122040;--green:#2E7D32;--green-light:#4CAF50;--gray-light:#F4F6F9;--white:#FFFFFF;--text-dark:#1A1A2E;--text-body:#444;--shadow-sm:0 2px 12px rgba(27,47,94,0.08);--shadow-md:0 6px 28px rgba(27,47,94,0.14);--radius:8px;--transition:all 0.3s ease}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;color:var(--text-body);background:var(--white);line-height:1.7;font-size:16px}img{max-width:100%;height:auto;display:block}a{text-decoration:none;color:inherit;transition:var(--transition)}ul{list-style:none}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}.section-pad{padding:90px 0}.section-pad-sm{padding:60px 0}
+.section-tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--green);margin-bottom:12px}
+.section-title{font-family:'Montserrat',sans-serif;font-size:clamp(26px,3.5vw,40px);font-weight:800;color:var(--navy);line-height:1.2;margin-bottom:16px}
+.divider{width:56px;height:4px;background:linear-gradient(90deg,var(--navy),var(--green));border-radius:2px;margin-bottom:24px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:var(--radius);font-weight:600;font-size:14px;cursor:pointer;border:2px solid transparent;transition:var(--transition)}
+.btn-primary{background:var(--green);color:var(--white);border-color:var(--green)}.btn-primary:hover{background:var(--green-light);border-color:var(--green-light);color:var(--white);transform:translateY(-2px);box-shadow:0 8px 20px rgba(46,125,50,0.3)}
+.btn-navy{background:var(--navy);color:var(--white);border-color:var(--navy)}.btn-navy:hover{background:var(--navy-dark);transform:translateY(-2px)}
+.btn-outline-white{background:transparent;color:var(--white);border:2px solid var(--white)}.btn-outline-white:hover{background:var(--white);color:var(--navy);transform:translateY(-2px)}
+.top-bar{background:var(--navy-dark);color:rgba(255,255,255,.75);font-size:13px;padding:8px 0}.top-bar .container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}.top-bar-left{display:flex;align-items:center;gap:24px}.top-bar-left span{display:flex;align-items:center;gap:6px}.top-bar-left i{color:var(--green-light)}.top-bar-right{display:flex;gap:12px}.top-bar-right a{width:28px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.8);font-size:13px;transition:var(--transition)}.top-bar-right a:hover{background:var(--green);color:var(--white)}
+.site-header{background:var(--white);box-shadow:var(--shadow-sm);position:sticky;top:0;z-index:1000}.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}.logo-wrap img{height:70px;width:auto}
+.main-nav{display:flex;align-items:center;gap:4px}.main-nav>li{position:relative}.main-nav>li>a{display:block;padding:10px 16px;font-weight:600;font-size:14px;color:var(--text-dark);border-radius:var(--radius);transition:var(--transition)}.main-nav>li>a:hover,.main-nav>li.active>a{color:var(--green);background:rgba(46,125,50,.07)}.main-nav>li>a i{margin-right:4px;font-size:12px}
+.main-nav .dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:240px;background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow-md);padding:8px 0;border-top:3px solid var(--green);z-index:100}.main-nav .dropdown:hover .dropdown-menu{display:block}.main-nav .dropdown-menu li a{display:block;padding:10px 20px;font-size:14px;color:var(--text-dark);transition:var(--transition)}.main-nav .dropdown-menu li a:hover,.main-nav .dropdown-menu li a.active-sub{color:var(--green);background:var(--gray-light);padding-left:26px}
+.nav-cta{margin-left:16px}.nav-toggle{display:none;background:none;border:none;font-size:22px;color:var(--navy);cursor:pointer}
+.page-hero{background:linear-gradient(135deg,#0a1628 0%,#1a2a4a 50%,var(--navy) 100%);color:var(--white);padding:80px 0 70px;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400"><circle cx="680" cy="50" r="260" fill="rgba(46,125,50,0.06)"/></svg>') no-repeat center/cover}
+.page-hero .container{position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.6);margin-bottom:20px}.breadcrumb a{color:rgba(255,255,255,.6)}.breadcrumb a:hover{color:var(--green-light)}.breadcrumb span{color:var(--green-light)}.breadcrumb i{font-size:10px}
+.page-hero h1{font-family:'Montserrat',sans-serif;font-size:clamp(28px,4vw,50px);font-weight:800;line-height:1.1;margin-bottom:20px}.page-hero h1 span{color:var(--green-light)}.page-hero p{font-size:17px;color:rgba(255,255,255,.82);max-width:620px;line-height:1.8;margin-bottom:32px}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(46,125,50,.2);border:1px solid rgba(76,175,80,.4);color:var(--green-light);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:20px}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}.intro-content p{color:var(--text-body);line-height:1.85;margin-bottom:20px;font-size:15.5px}
+.info-box{background:var(--gray-light);border-left:4px solid var(--navy);border-radius:0 var(--radius) var(--radius) 0;padding:24px 28px;margin-top:28px}.info-box h4{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:var(--navy);margin-bottom:10px;text-transform:uppercase;letter-spacing:1px}.info-box p{font-size:14px;color:var(--text-body);margin:0;line-height:1.7}
+.sidebar-card{background:var(--navy);border-radius:12px;padding:32px;color:var(--white);position:sticky;top:100px}.sidebar-card h3{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:700;margin-bottom:20px}.sidebar-card ul{display:flex;flex-direction:column;gap:12px}.sidebar-card ul li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(255,255,255,.8);line-height:1.5}.sidebar-card ul li i{color:var(--green-light);flex-shrink:0;margin-top:3px}.sidebar-cta{margin-top:24px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12)}.sidebar-cta p{font-size:13px;color:rgba(255,255,255,.65);margin-bottom:14px}
+.risk-types{background:var(--gray-light)}.risk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.risk-card{background:var(--white);border-radius:12px;padding:28px;box-shadow:var(--shadow-sm);transition:var(--transition);position:relative;overflow:hidden;border-left:4px solid var(--navy)}
+.risk-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md);border-left-color:var(--green)}
+.risk-card-icon{font-size:32px;color:var(--navy);margin-bottom:16px;transition:var(--transition)}
+.risk-card:hover .risk-card-icon{color:var(--green)}
+.risk-card h4{font-family:'Montserrat',sans-serif;font-size:15px;font-weight:700;color:var(--navy);margin-bottom:10px}
+.risk-card p{font-size:13px;color:var(--text-body);line-height:1.6}
+.process-section{background:var(--white)}.process-steps{display:flex;flex-direction:column;gap:0}
+.process-step{display:grid;grid-template-columns:80px 1fr;gap:24px;padding:32px 0;border-bottom:1px solid var(--gray-light);align-items:start}
+.process-step:last-child{border-bottom:none}
+.step-num{width:60px;height:60px;background:linear-gradient(135deg,var(--navy),var(--navy-dark));border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;color:var(--white);flex-shrink:0}
+.step-content h4{font-family:'Montserrat',sans-serif;font-size:16px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.step-content p{font-size:14px;color:var(--text-body);line-height:1.7}
+.cta-band{background:linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 100%);padding:70px 0;text-align:center}.cta-band h2{font-family:'Montserrat',sans-serif;font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--white);margin-bottom:14px}.cta-band p{color:rgba(255,255,255,.85);font-size:16px;margin-bottom:32px;max-width:520px;margin-left:auto;margin-right:auto}
+.site-footer{background:var(--navy-dark);color:rgba(255,255,255,.75);padding:72px 0 0}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:56px}.footer-brand img{height:65px;width:auto;margin-bottom:20px}.footer-brand p{font-size:14px;line-height:1.8;color:rgba(255,255,255,.65);margin-bottom:24px;max-width:300px}.footer-social{display:flex;gap:10px}.footer-social a{width:36px;height:36px;background:rgba(255,255,255,.08);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);font-size:14px;transition:var(--transition)}.footer-social a:hover{background:var(--green);color:var(--white)}.footer-col h4{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:var(--white);letter-spacing:1px;text-transform:uppercase;margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid var(--green);display:inline-block}.footer-col ul{display:flex;flex-direction:column;gap:10px}.footer-col ul li a{font-size:14px;color:rgba(255,255,255,.65);display:flex;align-items:center;gap:8px;transition:var(--transition)}.footer-col ul li a::before{content:'›';color:var(--green-light);font-size:16px;line-height:1}.footer-col ul li a:hover{color:var(--green-light);padding-left:4px}.footer-contact li{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:rgba(255,255,255,.65)}.footer-contact li i{color:var(--green-light);margin-top:2px;flex-shrink:0;width:16px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:20px 0}.footer-bottom .container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}.footer-bottom p{font-size:13px;color:rgba(255,255,255,.45)}.footer-bottom-links{display:flex;gap:20px}.footer-bottom-links a{font-size:13px;color:rgba(255,255,255,.45);transition:var(--transition)}.footer-bottom-links a:hover{color:var(--green-light)}
+@media(max-width:992px){.intro-grid{grid-template-columns:1fr;gap:40px}.sidebar-card{position:static}.risk-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.top-bar-left span:not(:first-child){display:none}.main-nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--white);padding:16px;box-shadow:var(--shadow-md);gap:0}.main-nav.open{display:flex}.main-nav .dropdown-menu{position:static;box-shadow:none;border:none;background:var(--gray-light);padding-left:16px;display:none}.main-nav .dropdown.open .dropdown-menu{display:block}.nav-toggle{display:block}.nav-cta{display:none}.site-header{position:relative}.risk-grid{grid-template-columns:1fr}.process-step{grid-template-columns:60px 1fr}.footer-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="top-bar"><div class="container"><div class="top-bar-left"><span><i class="fa fa-map-marker"></i> Mogadishu, Somalia</span><span><i class="fa fa-phone"></i> +252 61 000 0000</span><span><i class="fa fa-envelope"></i> info@hornmarkdesign.com</span></div><div class="top-bar-right"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div></div></div>
+<header class="site-header"><div class="container"><div class="header-inner">
+<div class="logo-wrap"><a href="hornmark.html"><img src="Picture2.png" alt="Horn Mark Design Consultant Ltd."></a></div>
+<button class="nav-toggle" id="navToggle"><i class="fa fa-bars"></i></button>
+<nav><ul class="main-nav" id="mainNav">
+<li><a href="hornmark.html">Home</a></li><li><a href="hornmark.html#about">About Us</a></li>
+<li class="dropdown active"><a href="hornmark.html#services">Our Services <i class="fa fa-angle-down"></i></a>
+<ul class="dropdown-menu">
+<li><a href="engineering-consultancy.html">Engineering Consultancy</a></li>
+<li><a href="environmental-assessment.html">Environmental &amp; Social Assessment</a></li>
+<li><a href="construction-management.html">Construction Management</a></li>
+<li><a href="project-management.html">Project Management</a></li>
+<li><a href="monitoring-evaluation.html">Monitoring &amp; Evaluation</a></li>
+<li><a href="risk-assessment.html" class="active-sub">Risk Assessment</a></li>
+<li><a href="bim-digital-engineering.html">BIM &amp; Digital Engineering</a></li>
+</ul></li>
+<li><a href="hornmark.html#why-us">Why Choose Us</a></li><li><a href="hornmark.html#contact">Contact</a></li>
+</ul></nav>
+<a href="hornmark.html#contact" class="btn btn-primary nav-cta">Get In Touch</a>
+</div></div></header>
+
+<section class="page-hero"><div class="container">
+<div class="breadcrumb"><a href="hornmark.html">Home</a><i class="fa fa-angle-right"></i><a href="hornmark.html#services">Our Services</a><i class="fa fa-angle-right"></i><span>Risk Assessment &amp; Management</span></div>
+<div class="hero-tag"><i class="fa fa-shield"></i> Core Service</div>
+<h1>Risk Assessment <span>&amp; Management</span></h1>
+<p>Systematic identification, analysis, and mitigation of project and operational risks — protecting your investment and ensuring project success in complex environments.</p>
+<a href="hornmark.html#contact" class="btn btn-primary"><i class="fa fa-envelope"></i> Request a Proposal</a>
+</div></section>
+
+<section class="section-pad" style="background:var(--white)"><div class="container"><div class="intro-grid">
+<div class="intro-content">
+<span class="section-tag">Overview</span>
+<h2 class="section-title">Protect Your Projects from Risk</h2>
+<div class="divider"></div>
+<p>Horn Mark Design Consultant Ltd. provides comprehensive Risk Assessment and Management services that help clients identify, evaluate, and mitigate risks across all phases of project and programme lifecycles. Operating in Somalia's complex environment requires sophisticated risk management that addresses technical, environmental, social, security, and financial risk dimensions simultaneously.</p>
+<p>Our risk specialists apply internationally recognized risk frameworks — including ISO 31000, PMI Risk Management, and donor-specific risk frameworks — to develop risk registers, risk response plans, and monitoring protocols that reduce uncertainty and protect project outcomes.</p>
+<p>From pre-investment risk screening through construction phase risk management and operational risk planning, HMD provides the risk intelligence and mitigation strategies that clients need to make informed decisions and protect their programmes.</p>
+<div class="info-box"><h4><i class="fa fa-shield" style="margin-right:6px;color:var(--navy)"></i> Somalia Context Expertise</h4><p>HMD's risk assessments incorporate deep understanding of Somalia's security, institutional, and environmental landscape — enabling realistic risk ratings and practical mitigation measures that work in challenging operational contexts.</p></div>
+</div>
+<div><div class="sidebar-card">
+<h3><i class="fa fa-list-ul" style="margin-right:10px;color:var(--green-light)"></i> Service Scope</h3>
+<ul>
+<li><i class="fa fa-check-circle"></i> Project &amp; Construction Risk Analysis</li>
+<li><i class="fa fa-check-circle"></i> Environmental Risk Assessment</li>
+<li><i class="fa fa-check-circle"></i> Health &amp; Safety Risk Assessments</li>
+<li><i class="fa fa-check-circle"></i> Climate Change Risk Assessment</li>
+<li><i class="fa fa-check-circle"></i> Security Risk Assessments</li>
+<li><i class="fa fa-check-circle"></i> Financial &amp; Investment Risk Analysis</li>
+<li><i class="fa fa-check-circle"></i> Business Continuity Planning</li>
+<li><i class="fa fa-check-circle"></i> Risk Register Development &amp; Management</li>
+<li><i class="fa fa-check-circle"></i> Risk Monitoring &amp; Reporting</li>
+<li><i class="fa fa-check-circle"></i> Residual Risk Assessment</li>
+</ul>
+<div class="sidebar-cta"><p>Need risk assessment for your project?</p><a href="hornmark.html#contact" class="btn btn-primary" style="width:100%;justify-content:center;"><i class="fa fa-envelope"></i> Contact Us</a></div>
+</div></div>
+</div></div></section>
+
+<section class="risk-types section-pad-sm"><div class="container">
+<div style="text-align:center;margin-bottom:48px;"><span class="section-tag">Risk Categories</span><h2 class="section-title" style="max-width:500px;margin:0 auto 12px;">Types of Risk We Assess</h2><div class="divider" style="margin:0 auto;"></div></div>
+<div class="risk-grid">
+<div class="risk-card"><div class="risk-card-icon"><i class="fa fa-cogs"></i></div><h4>Technical Risk</h4><p>Engineering failures, design deficiencies, geotechnical hazards, material quality issues, and construction methodology risks that could affect project delivery and asset performance.</p></div>
+<div class="risk-card"><div class="risk-card-icon"><i class="fa fa-leaf"></i></div><h4>Environmental Risk</h4><p>Ecological impacts, pollution risks, natural hazard exposure, and climate-related vulnerabilities affecting project sites and surrounding communities and ecosystems.</p></div>
+<div class="risk-card"><div class="risk-card-icon"><i class="fa fa-shield"></i></div><h4>Health &amp; Safety Risk</h4><p>Worker safety hazards, community health impacts, occupational exposure risks, and emergency response requirements on construction and operational sites.</p></div>
+<div class="risk-card"><div class="risk-card-icon"><i class="fa fa-thermometer-half"></i></div><h4>Climate Risk</h4><p>Physical climate change risks including flooding, drought, temperature extremes, and sea-level rise that could affect infrastructure assets over their operational lifetime.</p></div>
+<div class="risk-card"><div class="risk-card-icon"><i class="fa fa-lock"></i></div><h4>Security Risk</h4><p>Conflict-related risks, personnel security threats, asset security vulnerabilities, and access constraints — particularly relevant for operations in Somalia and fragile contexts.</p></div>
+<div class="risk-card"><div class="risk-card-icon"><i class="fa fa-users"></i></div><h4>Social &amp; Reputational Risk</h4><p>Community opposition, social conflict risks, involuntary resettlement risks, labour rights risks, and reputational risks from inadequate stakeholder management.</p></div>
+</div></div></section>
+
+<section class="process-section section-pad"><div class="container">
+<div style="margin-bottom:48px;"><span class="section-tag">Our Methodology</span><h2 class="section-title">Risk Management Process</h2><div class="divider"></div></div>
+<div class="process-steps">
+<div class="process-step"><div class="step-num">01</div><div class="step-content"><h4>Risk Identification</h4><p>Systematic identification of all potential risks through document review, site reconnaissance, expert interviews, stakeholder consultations, and structured brainstorming workshops.</p></div></div>
+<div class="process-step"><div class="step-num">02</div><div class="step-content"><h4>Risk Analysis &amp; Rating</h4><p>Qualitative and quantitative assessment of identified risks — evaluating likelihood, potential impact, and exposure using probability/impact matrices and risk scoring methodologies.</p></div></div>
+<div class="process-step"><div class="step-num">03</div><div class="step-content"><h4>Risk Response Planning</h4><p>Development of risk mitigation, transfer, acceptance, or avoidance strategies for each significant risk — with assigned owners, timelines, and resource requirements.</p></div></div>
+<div class="process-step"><div class="step-num">04</div><div class="step-content"><h4>Risk Register Development</h4><p>Compilation of a comprehensive, live risk register documenting all identified risks, ratings, mitigation actions, owners, residual risk levels, and review schedules.</p></div></div>
+<div class="process-step"><div class="step-num">05</div><div class="step-content"><h4>Monitoring &amp; Review</h4><p>Ongoing risk monitoring throughout the project lifecycle, with periodic risk review meetings, register updates, and escalation protocols for emerging or materializing risks.</p></div></div>
+</div></div></section>
+
+<section class="cta-band"><div class="container">
+<h2>Don't Let Risk Derail Your Project</h2>
+<p>HMD's risk assessment specialists provide the intelligence and mitigation strategies you need to protect your investment and deliver with confidence.</p>
+<div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+<a href="hornmark.html#contact" class="btn btn-outline-white"><i class="fa fa-envelope"></i> Get In Touch</a>
+<a href="hornmark.html#services" class="btn" style="background:var(--white);color:var(--navy);border-color:var(--white);"><i class="fa fa-th-large"></i> All Services</a>
+</div></div></section>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-brand"><a href="hornmark.html"><img src="Picture2.png" alt="Horn Mark Design Consultant Ltd."></a><p>A multidisciplinary engineering and consulting firm headquartered in Mogadishu, Somalia. Delivering innovative, sustainable, and cost-effective solutions across the Horn of Africa since 2018.</p><div class="footer-social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div></div>
+<div class="footer-col"><h4>Our Services</h4><ul><li><a href="engineering-consultancy.html">Engineering Consultancy</a></li><li><a href="environmental-assessment.html">Environmental &amp; Social Assessment</a></li><li><a href="construction-management.html">Construction Management</a></li><li><a href="project-management.html">Project Management</a></li><li><a href="monitoring-evaluation.html">Monitoring &amp; Evaluation</a></li><li><a href="risk-assessment.html">Risk Assessment</a></li><li><a href="bim-digital-engineering.html">BIM &amp; Digital Engineering</a></li></ul></div>
+<div class="footer-col"><h4>Contact Info</h4><ul class="footer-contact"><li><i class="fa fa-map-marker"></i> Mogadishu, Somalia</li><li><i class="fa fa-phone"></i> +252 61 000 0000</li><li><i class="fa fa-envelope"></i> info@hornmarkdesign.com</li><li><i class="fa fa-globe"></i> www.hornmarkdesign.com</li></ul></div>
+</div></div>
+<div class="footer-bottom"><div class="container"><p>&copy; 2025 Horn Mark Design Consultant Ltd. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div></div></div>
+</footer>
+<script>const navToggle=document.getElementById('navToggle');const mainNav=document.getElementById('mainNav');navToggle.addEventListener('click',()=>mainNav.classList.toggle('open'));document.querySelectorAll('.main-nav .dropdown>a').forEach(l=>l.addEventListener('click',e=>{if(window.innerWidth<=768){e.preventDefault();l.parentElement.classList.toggle('open');}}));</script>
+</body></html>

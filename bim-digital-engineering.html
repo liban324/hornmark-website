@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BIM &amp; Digital Engineering – Horn Mark Design Consultant Ltd.</title>
+<link rel="stylesheet" href="./Runji Consulting Group – Engineering &amp; Project Management_files/font-awesome.min.css">
+<link rel="stylesheet" href="./Runji Consulting Group – Engineering &amp; Project Management_files/bootstrap.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1B2F5E;--navy-dark:#122040;--green:#2E7D32;--green-light:#4CAF50;--gray-light:#F4F6F9;--white:#FFFFFF;--text-dark:#1A1A2E;--text-body:#444;--shadow-sm:0 2px 12px rgba(27,47,94,0.08);--shadow-md:0 6px 28px rgba(27,47,94,0.14);--radius:8px;--transition:all 0.3s ease}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;color:var(--text-body);background:var(--white);line-height:1.7;font-size:16px}img{max-width:100%;height:auto;display:block}a{text-decoration:none;color:inherit;transition:var(--transition)}ul{list-style:none}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}.section-pad{padding:90px 0}.section-pad-sm{padding:60px 0}
+.section-tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--green);margin-bottom:12px}
+.section-title{font-family:'Montserrat',sans-serif;font-size:clamp(26px,3.5vw,40px);font-weight:800;color:var(--navy);line-height:1.2;margin-bottom:16px}
+.divider{width:56px;height:4px;background:linear-gradient(90deg,var(--navy),var(--green));border-radius:2px;margin-bottom:24px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;border-radius:var(--radius);font-weight:600;font-size:14px;cursor:pointer;border:2px solid transparent;transition:var(--transition)}
+.btn-primary{background:var(--green);color:var(--white);border-color:var(--green)}.btn-primary:hover{background:var(--green-light);border-color:var(--green-light);color:var(--white);transform:translateY(-2px);box-shadow:0 8px 20px rgba(46,125,50,0.3)}
+.btn-navy{background:var(--navy);color:var(--white);border-color:var(--navy)}.btn-navy:hover{background:var(--navy-dark);transform:translateY(-2px)}
+.btn-outline-white{background:transparent;color:var(--white);border:2px solid var(--white)}.btn-outline-white:hover{background:var(--white);color:var(--navy);transform:translateY(-2px)}
+.top-bar{background:var(--navy-dark);color:rgba(255,255,255,.75);font-size:13px;padding:8px 0}.top-bar .container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}.top-bar-left{display:flex;align-items:center;gap:24px}.top-bar-left span{display:flex;align-items:center;gap:6px}.top-bar-left i{color:var(--green-light)}.top-bar-right{display:flex;gap:12px}.top-bar-right a{width:28px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(255,255,255,.1);color:rgba(255,255,255,.8);font-size:13px;transition:var(--transition)}.top-bar-right a:hover{background:var(--green);color:var(--white)}
+.site-header{background:var(--white);box-shadow:var(--shadow-sm);position:sticky;top:0;z-index:1000}.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}.logo-wrap img{height:70px;width:auto}
+.main-nav{display:flex;align-items:center;gap:4px}.main-nav>li{position:relative}.main-nav>li>a{display:block;padding:10px 16px;font-weight:600;font-size:14px;color:var(--text-dark);border-radius:var(--radius);transition:var(--transition)}.main-nav>li>a:hover,.main-nav>li.active>a{color:var(--green);background:rgba(46,125,50,.07)}.main-nav>li>a i{margin-right:4px;font-size:12px}
+.main-nav .dropdown-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:240px;background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow-md);padding:8px 0;border-top:3px solid var(--green);z-index:100}.main-nav .dropdown:hover .dropdown-menu{display:block}.main-nav .dropdown-menu li a{display:block;padding:10px 20px;font-size:14px;color:var(--text-dark);transition:var(--transition)}.main-nav .dropdown-menu li a:hover,.main-nav .dropdown-menu li a.active-sub{color:var(--green);background:var(--gray-light);padding-left:26px}
+.nav-cta{margin-left:16px}.nav-toggle{display:none;background:none;border:none;font-size:22px;color:var(--navy);cursor:pointer}
+.page-hero{background:linear-gradient(135deg,var(--navy-dark) 0%,#1a2a4a 40%,#0f3d5a 100%);color:var(--white);padding:80px 0 70px;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400"><circle cx="700" cy="50" r="280" fill="rgba(46,125,50,0.07)"/><circle cx="100" cy="350" r="150" fill="rgba(255,255,255,0.03)"/></svg>') no-repeat center/cover}
+.page-hero .container{position:relative;z-index:1}
+.breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.6);margin-bottom:20px}.breadcrumb a{color:rgba(255,255,255,.6)}.breadcrumb a:hover{color:var(--green-light)}.breadcrumb span{color:var(--green-light)}.breadcrumb i{font-size:10px}
+.page-hero h1{font-family:'Montserrat',sans-serif;font-size:clamp(28px,4vw,50px);font-weight:800;line-height:1.1;margin-bottom:20px}.page-hero h1 span{color:var(--green-light)}.page-hero p{font-size:17px;color:rgba(255,255,255,.82);max-width:620px;line-height:1.8;margin-bottom:32px}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(46,125,50,.2);border:1px solid rgba(76,175,80,.4);color:var(--green-light);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:20px}
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}.intro-content p{color:var(--text-body);line-height:1.85;margin-bottom:20px;font-size:15.5px}
+.info-box{background:var(--gray-light);border-left:4px solid var(--navy);border-radius:0 var(--radius) var(--radius) 0;padding:24px 28px;margin-top:28px}.info-box h4{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:var(--navy);margin-bottom:10px;text-transform:uppercase;letter-spacing:1px}.info-box p{font-size:14px;color:var(--text-body);margin:0;line-height:1.7}
+.sidebar-card{background:var(--navy);border-radius:12px;padding:32px;color:var(--white);position:sticky;top:100px}.sidebar-card h3{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:700;margin-bottom:20px}.sidebar-card ul{display:flex;flex-direction:column;gap:12px}.sidebar-card ul li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(255,255,255,.8);line-height:1.5}.sidebar-card ul li i{color:var(--green-light);flex-shrink:0;margin-top:3px}.sidebar-cta{margin-top:24px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12)}.sidebar-cta p{font-size:13px;color:rgba(255,255,255,.65);margin-bottom:14px}
+/* BIM DIMENSIONS */
+.bim-dims{background:var(--gray-light)}.dims-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.dim-card{background:var(--white);border-radius:12px;padding:32px 24px;box-shadow:var(--shadow-sm);text-align:center;transition:var(--transition);position:relative;overflow:hidden}
+.dim-card::after{content:attr(data-dim);position:absolute;top:-10px;right:16px;font-family:'Montserrat',sans-serif;font-size:72px;font-weight:800;color:rgba(27,47,94,.05);line-height:1;pointer-events:none}
+.dim-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-md)}
+.dim-badge{width:64px;height:64px;background:linear-gradient(135deg,var(--navy),#2a4a8a);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;transition:var(--transition)}
+.dim-card:hover .dim-badge{background:linear-gradient(135deg,var(--green),var(--green-light))}
+.dim-badge i{color:var(--white);font-size:24px}
+.dim-card h4{font-family:'Montserrat',sans-serif;font-size:16px;font-weight:700;color:var(--navy);margin-bottom:8px}
+.dim-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green);margin-bottom:10px}
+.dim-card p{font-size:13px;color:var(--text-body);line-height:1.6}
+/* BENEFITS */
+.benefits-section{background:linear-gradient(135deg,var(--navy-dark),var(--navy));padding:90px 0;color:var(--white)}
+.benefits-section .section-title{color:var(--white)}
+.benefits-section .section-tag{color:var(--green-light)}
+.benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.benefit-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:24px;transition:var(--transition)}
+.benefit-card:hover{background:rgba(255,255,255,.12);transform:translateY(-3px)}
+.benefit-card i{font-size:26px;color:var(--green-light);margin-bottom:12px;display:block}
+.benefit-card h4{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:var(--white);margin-bottom:8px}
+.benefit-card p{font-size:13px;color:rgba(255,255,255,.7);line-height:1.6}
+.cta-band{background:linear-gradient(135deg,var(--green) 0%,var(--green-light) 100%);padding:70px 0;text-align:center}.cta-band h2{font-family:'Montserrat',sans-serif;font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--white);margin-bottom:14px}.cta-band p{color:rgba(255,255,255,.9);font-size:16px;margin-bottom:32px;max-width:520px;margin-left:auto;margin-right:auto}
+.site-footer{background:var(--navy-dark);color:rgba(255,255,255,.75);padding:72px 0 0}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:48px;padding-bottom:56px}.footer-brand img{height:65px;width:auto;margin-bottom:20px}.footer-brand p{font-size:14px;line-height:1.8;color:rgba(255,255,255,.65);margin-bottom:24px;max-width:300px}.footer-social{display:flex;gap:10px}.footer-social a{width:36px;height:36px;background:rgba(255,255,255,.08);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);font-size:14px;transition:var(--transition)}.footer-social a:hover{background:var(--green);color:var(--white)}.footer-col h4{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:var(--white);letter-spacing:1px;text-transform:uppercase;margin-bottom:20px;padding-bottom:10px;border-bottom:2px solid var(--green);display:inline-block}.footer-col ul{display:flex;flex-direction:column;gap:10px}.footer-col ul li a{font-size:14px;color:rgba(255,255,255,.65);display:flex;align-items:center;gap:8px;transition:var(--transition)}.footer-col ul li a::before{content:'›';color:var(--green-light);font-size:16px;line-height:1}.footer-col ul li a:hover{color:var(--green-light);padding-left:4px}.footer-contact li{display:flex;align-items:flex-start;gap:12px;margin-bottom:14px;font-size:14px;color:rgba(255,255,255,.65)}.footer-contact li i{color:var(--green-light);margin-top:2px;flex-shrink:0;width:16px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:20px 0}.footer-bottom .container{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}.footer-bottom p{font-size:13px;color:rgba(255,255,255,.45)}.footer-bottom-links{display:flex;gap:20px}.footer-bottom-links a{font-size:13px;color:rgba(255,255,255,.45);transition:var(--transition)}.footer-bottom-links a:hover{color:var(--green-light)}
+@media(max-width:992px){.intro-grid{grid-template-columns:1fr;gap:40px}.sidebar-card{position:static}.dims-grid{grid-template-columns:1fr 1fr}.benefits-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.top-bar-left span:not(:first-child){display:none}.main-nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--white);padding:16px;box-shadow:var(--shadow-md);gap:0}.main-nav.open{display:flex}.main-nav .dropdown-menu{position:static;box-shadow:none;border:none;background:var(--gray-light);padding-left:16px;display:none}.main-nav .dropdown.open .dropdown-menu{display:block}.nav-toggle{display:block}.nav-cta{display:none}.site-header{position:relative}.dims-grid{grid-template-columns:1fr}.benefits-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="top-bar"><div class="container"><div class="top-bar-left"><span><i class="fa fa-map-marker"></i> Mogadishu, Somalia</span><span><i class="fa fa-phone"></i> +252 61 000 0000</span><span><i class="fa fa-envelope"></i> info@hornmarkdesign.com</span></div><div class="top-bar-right"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div></div></div>
+<header class="site-header"><div class="container"><div class="header-inner">
+<div class="logo-wrap"><a href="hornmark.html"><img src="Picture2.png" alt="Horn Mark Design Consultant Ltd."></a></div>
+<button class="nav-toggle" id="navToggle"><i class="fa fa-bars"></i></button>
+<nav><ul class="main-nav" id="mainNav">
+<li><a href="hornmark.html">Home</a></li><li><a href="hornmark.html#about">About Us</a></li>
+<li class="dropdown active"><a href="hornmark.html#services">Our Services <i class="fa fa-angle-down"></i></a>
+<ul class="dropdown-menu">
+<li><a href="engineering-consultancy.html">Engineering Consultancy</a></li>
+<li><a href="environmental-assessment.html">Environmental &amp; Social Assessment</a></li>
+<li><a href="construction-management.html">Construction Management</a></li>
+<li><a href="project-management.html">Project Management</a></li>
+<li><a href="monitoring-evaluation.html">Monitoring &amp; Evaluation</a></li>
+<li><a href="risk-assessment.html">Risk Assessment</a></li>
+<li><a href="bim-digital-engineering.html" class="active-sub">BIM &amp; Digital Engineering</a></li>
+</ul></li>
+<li><a href="hornmark.html#why-us">Why Choose Us</a></li><li><a href="hornmark.html#contact">Contact</a></li>
+</ul></nav>
+<a href="hornmark.html#contact" class="btn btn-primary nav-cta">Get In Touch</a>
+</div></div></header>
+
+<section class="page-hero"><div class="container">
+<div class="breadcrumb"><a href="hornmark.html">Home</a><i class="fa fa-angle-right"></i><a href="hornmark.html#services">Our Services</a><i class="fa fa-angle-right"></i><span>BIM &amp; Digital Engineering</span></div>
+<div class="hero-tag"><i class="fa fa-cube"></i> Digital Innovation</div>
+<h1>BIM &amp; <span>Digital Engineering</span></h1>
+<p>Building Information Modelling as a core component of modern project delivery — reducing risk, improving coordination, and providing clients with better outcomes from design through to facility management.</p>
+<a href="hornmark.html#contact" class="btn btn-primary"><i class="fa fa-envelope"></i> Request a Proposal</a>
+</div></section>
+
+<section class="section-pad" style="background:var(--white)"><div class="container"><div class="intro-grid">
+<div class="intro-content">
+<span class="section-tag">Overview</span>
+<h2 class="section-title">Pioneering Digital Engineering in Somalia</h2>
+<div class="divider"></div>
+<p>Horn Mark Design Consultant Ltd. embraces Building Information Modelling (BIM) as a core component of modern engineering and construction project delivery. Through BIM-enabled workflows, we provide clients with improved project coordination, reduced construction risks, enhanced cost control, and optimized asset lifecycle management.</p>
+<p>As one of the first engineering firms in Somalia to adopt BIM workflows, HMD is bringing the power of digital engineering to infrastructure projects across the Horn of Africa. Our BIM specialists work alongside the engineering, construction management, and project management teams to create intelligent 3D models that serve as the single source of truth throughout the project lifecycle.</p>
+<p>The adoption of BIM allows clients to minimize design conflicts, improve project coordination, reduce construction risks, and make more informed decisions — delivering better outcomes from design through to facility management and long-term asset maintenance.</p>
+<div class="info-box"><h4><i class="fa fa-cube" style="margin-right:6px;color:var(--navy)"></i> BIM Maturity</h4><p>HMD delivers BIM Level 2 compliant workflows for federated model collaboration, and works towards Level 3 (integrated, cloud-hosted models) on suitable projects. Our BIM outputs comply with ISO 19650 and client-specific BIM Execution Plans (BEP).</p></div>
+</div>
+<div><div class="sidebar-card">
+<h3><i class="fa fa-list-ul" style="margin-right:10px;color:var(--green-light)"></i> Service Scope</h3>
+<ul>
+<li><i class="fa fa-check-circle"></i> 3D Architectural, Structural &amp; MEP Modelling</li>
+<li><i class="fa fa-check-circle"></i> Clash Detection &amp; Coordination</li>
+<li><i class="fa fa-check-circle"></i> 4D BIM — Construction Sequencing</li>
+<li><i class="fa fa-check-circle"></i> 5D BIM — Cost Planning &amp; Estimation</li>
+<li><i class="fa fa-check-circle"></i> Automated Quantity Take-Offs</li>
+<li><i class="fa fa-check-circle"></i> BIM Execution Plan (BEP) Development</li>
+<li><i class="fa fa-check-circle"></i> Asset Information Modelling (AIM)</li>
+<li><i class="fa fa-check-circle"></i> Digital Twin Development</li>
+<li><i class="fa fa-check-circle"></i> BIM Model Audit &amp; Review</li>
+<li><i class="fa fa-check-circle"></i> BIM Training &amp; Capacity Building</li>
+</ul>
+<div class="sidebar-cta"><p>Ready to adopt BIM on your project?</p><a href="hornmark.html#contact" class="btn btn-primary" style="width:100%;justify-content:center;"><i class="fa fa-envelope"></i> Contact Us</a></div>
+</div></div>
+</div></div></section>
+
+<section class="bim-dims section-pad-sm"><div class="container">
+<div style="text-align:center;margin-bottom:48px;"><span class="section-tag">BIM Dimensions</span><h2 class="section-title" style="max-width:500px;margin:0 auto 12px;">From 3D to nD — BIM Across Dimensions</h2><div class="divider" style="margin:0 auto;"></div></div>
+<div class="dims-grid">
+<div class="dim-card" data-dim="3D"><div class="dim-badge"><i class="fa fa-cube"></i></div><div class="dim-label">3D BIM</div><h4>3D Digital Models</h4><p>Intelligent 3D models for architectural, structural, and MEP disciplines — the foundation of all BIM workflows and coordination.</p></div>
+<div class="dim-card" data-dim="4D"><div class="dim-badge"><i class="fa fa-calendar"></i></div><div class="dim-label">4D BIM</div><h4>Time &amp; Construction Sequencing</h4><p>Linking 3D model elements to project schedules to visualize construction sequences, optimize phasing, and identify programme risks.</p></div>
+<div class="dim-card" data-dim="5D"><div class="dim-badge"><i class="fa fa-dollar"></i></div><div class="dim-label">5D BIM</div><h4>Cost Planning &amp; Estimation</h4><p>Connecting model geometry to cost data for automated quantity extraction, cost planning, and budget tracking throughout design development.</p></div>
+<div class="dim-card" data-dim="6D"><div class="dim-badge"><i class="fa fa-leaf"></i></div><div class="dim-label">6D BIM</div><h4>Sustainability &amp; Energy Analysis</h4><p>Using BIM models for energy performance analysis, carbon assessment, and sustainability optimization of building and infrastructure designs.</p></div>
+<div class="dim-card" data-dim="7D"><div class="dim-badge"><i class="fa fa-database"></i></div><div class="dim-label">7D BIM</div><h4>Asset &amp; Facilities Management</h4><p>Handover of information-rich models to asset owners for facilities management, maintenance scheduling, and lifecycle cost analysis.</p></div>
+<div class="dim-card" data-dim=""><div class="dim-badge"><i class="fa fa-search"></i></div><div class="dim-label">Clash Detection</div><h4>Multi-Discipline Coordination</h4><p>Federated model clash detection between architectural, structural, and MEP disciplines — eliminating design conflicts before construction begins.</p></div>
+</div></div></section>
+
+<section class="benefits-section"><div class="container">
+<div style="margin-bottom:48px;"><span class="section-tag">Why BIM?</span><h2 class="section-title">Key Benefits of BIM-Enabled Delivery</h2><div class="divider" style="background:linear-gradient(90deg,var(--green-light),rgba(255,255,255,.3));"></div></div>
+<div class="benefits-grid">
+<div class="benefit-card"><i class="fa fa-search-minus"></i><h4>Fewer Design Conflicts</h4><p>Clash detection identifies interdisciplinary clashes before construction, reducing costly on-site changes and rework.</p></div>
+<div class="benefit-card"><i class="fa fa-money"></i><h4>Better Cost Control</h4><p>5D BIM enables accurate quantity take-offs and real-time cost tracking as design evolves, improving budget certainty.</p></div>
+<div class="benefit-card"><i class="fa fa-users"></i><h4>Improved Collaboration</h4><p>A single federated model ensures all project stakeholders — designers, contractors, clients — work from the same information.</p></div>
+<div class="benefit-card"><i class="fa fa-clock-o"></i><h4>Faster Project Delivery</h4><p>4D scheduling and visual sequencing optimise construction programmes and help teams anticipate and avoid delays.</p></div>
+<div class="benefit-card"><i class="fa fa-eye"></i><h4>Enhanced Client Understanding</h4><p>3D visualizations and walkthroughs help clients understand and approve designs before investment is committed.</p></div>
+<div class="benefit-card"><i class="fa fa-wrench"></i><h4>Better Asset Management</h4><p>7D BIM provides facility managers with accurate, structured asset data for effective maintenance and lifecycle planning.</p></div>
+</div></div></section>
+
+<section class="cta-band"><div class="container">
+<h2>Transform Your Project with BIM</h2>
+<p>Contact HMD today to discuss how Building Information Modelling can improve coordination, reduce risk, and deliver better outcomes on your next project.</p>
+<div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+<a href="hornmark.html#contact" class="btn btn-outline-white"><i class="fa fa-envelope"></i> Get In Touch</a>
+<a href="hornmark.html#services" class="btn btn-navy"><i class="fa fa-th-large"></i> All Services</a>
+</div></div></section>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid">
+<div class="footer-brand"><a href="hornmark.html"><img src="Picture2.png" alt="Horn Mark Design Consultant Ltd."></a><p>A multidisciplinary engineering and consulting firm headquartered in Mogadishu, Somalia. Delivering innovative, sustainable, and cost-effective solutions across the Horn of Africa since 2018.</p><div class="footer-social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div></div>
+<div class="footer-col"><h4>Our Services</h4><ul><li><a href="engineering-consultancy.html">Engineering Consultancy</a></li><li><a href="environmental-assessment.html">Environmental &amp; Social Assessment</a></li><li><a href="construction-management.html">Construction Management</a></li><li><a href="project-management.html">Project Management</a></li><li><a href="monitoring-evaluation.html">Monitoring &amp; Evaluation</a></li><li><a href="risk-assessment.html">Risk Assessment</a></li><li><a href="bim-digital-engineering.html">BIM &amp; Digital Engineering</a></li></ul></div>
+<div class="footer-col"><h4>Contact Info</h4><ul class="footer-contact"><li><i class="fa fa-map-marker"></i> Mogadishu, Somalia</li><li><i class="fa fa-phone"></i> +252 61 000 0000</li><li><i class="fa fa-envelope"></i> info@hornmarkdesign.com</li><li><i class="fa fa-globe"></i> www.hornmarkdesign.com</li></ul></div>
+</div></div>
+<div class="footer-bottom"><div class="container"><p>&copy; 2025 Horn Mark Design Consultant Ltd. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div></div></div>
+</footer>
+<script>const navToggle=document.getElementById('navToggle');const mainNav=document.getElementById('mainNav');navToggle.addEventListener('click',()=>mainNav.classList.toggle('open'));document.querySelectorAll('.main-nav .dropdown>a').forEach(l=>l.addEventListener('click',e=>{if(window.innerWidth<=768){e.preventDefault();l.parentElement.classList.toggle('open');}}));</script>
+</body></html>
