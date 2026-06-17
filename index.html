@@ -630,6 +630,22 @@ ul { list-style: none; }
   flex-shrink: 0;
   margin-top: 1px;
 }
+a.service-card { text-decoration: none; color: inherit; cursor: pointer; }
+.service-learn {
+  margin-top: auto;
+  padding-top: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+a.service-card:hover .service-learn {
+  color: var(--navy);
+  gap: 12px;
+}
 
 /* ============================================================
    BIM SECTION
@@ -1096,7 +1112,7 @@ ul { list-style: none; }
     <div class="services-grid">
 
       <!-- 1 -->
-      <div class="service-card">
+      <a href="engineering-consultancy.html" class="service-card">
         <img src="engineering consultancy.jpeg" alt="Engineering Consultancy" class="service-img">
         <div class="service-card-body">
           <h3>Engineering Consultancy</h3>
@@ -1109,11 +1125,12 @@ ul { list-style: none; }
             <li>Cost Estimation &amp; BoQ Preparation</li>
             <li>Tender Documents &amp; Specifications</li>
           </ul>
+          <div class="service-learn">Learn More <i class="fa fa-arrow-right"></i></div>
         </div>
-      </div>
+      </a>
 
       <!-- 2 -->
-      <div class="service-card">
+      <a href="environmental-assessment.html" class="service-card">
         <img src="environmental and social impact assessment.jpeg" alt="Environmental &amp; Social Assessment" class="service-img">
         <div class="service-card-body">
           <h3>Environmental &amp; Social Assessment</h3>
@@ -1126,11 +1143,12 @@ ul { list-style: none; }
             <li>Climate Change Risk Assessment</li>
             <li>World Bank ESF / IFC Standards Compliance</li>
           </ul>
+          <div class="service-learn">Learn More <i class="fa fa-arrow-right"></i></div>
         </div>
-      </div>
+      </a>
 
       <!-- 3 -->
-      <div class="service-card">
+      <a href="construction-management.html" class="service-card">
         <img src="construction management and supervision.jpeg" alt="Construction Management" class="service-img">
         <div class="service-card-body">
           <h3>Construction Management</h3>
@@ -1143,11 +1161,12 @@ ul { list-style: none; }
             <li>HSE Monitoring</li>
             <li>Project Close-Out &amp; Handover</li>
           </ul>
+          <div class="service-learn">Learn More <i class="fa fa-arrow-right"></i></div>
         </div>
-      </div>
+      </a>
 
       <!-- 4 -->
-      <div class="service-card">
+      <a href="project-management.html" class="service-card">
         <img src="project management service.jpeg" alt="Project Management" class="service-img">
         <div class="service-card-body">
           <h3>Project Management</h3>
@@ -1160,11 +1179,12 @@ ul { list-style: none; }
             <li>Stakeholder Coordination</li>
             <li>Program &amp; Portfolio Management</li>
           </ul>
+          <div class="service-learn">Learn More <i class="fa fa-arrow-right"></i></div>
         </div>
-      </div>
+      </a>
 
       <!-- 5 -->
-      <div class="service-card">
+      <a href="monitoring-evaluation.html" class="service-card">
         <img src="monitoring and evaluation.jpeg" alt="Monitoring, Evaluation &amp; Learning" class="service-img">
         <div class="service-card-body">
           <h3>Monitoring, Evaluation &amp; Learning</h3>
@@ -1177,11 +1197,12 @@ ul { list-style: none; }
             <li>Data Collection &amp; Analysis</li>
             <li>Learning &amp; Knowledge Management</li>
           </ul>
+          <div class="service-learn">Learn More <i class="fa fa-arrow-right"></i></div>
         </div>
-      </div>
+      </a>
 
       <!-- 6 -->
-      <div class="service-card">
+      <a href="risk-assessment.html" class="service-card">
         <img src="risk assessment.jpeg" alt="Risk Assessment &amp; Management" class="service-img">
         <div class="service-card-body">
           <h3>Risk Assessment &amp; Management</h3>
@@ -1194,8 +1215,9 @@ ul { list-style: none; }
             <li>Security Risk Assessments</li>
             <li>Business Continuity Planning</li>
           </ul>
+          <div class="service-learn">Learn More <i class="fa fa-arrow-right"></i></div>
         </div>
-      </div>
+      </a>
 
     </div>
   </div>
