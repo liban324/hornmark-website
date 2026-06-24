@@ -1196,12 +1196,11 @@ a.service-card:hover .service-learn {
   box-shadow: 0 6px 20px rgba(46,125,50,0.3);
 }
 
-.modal-success {
+[data-fs-success] {
   display: none;
   text-align: center;
   padding: 48px 32px;
 }
-.modal-success.show { display: block; }
 .modal-success .success-icon {
   width: 72px; height: 72px;
   background: linear-gradient(135deg, var(--green), var(--green-light));
@@ -1860,34 +1859,47 @@ a.service-card:hover .service-learn {
     <div class="modal-body" id="proposalFormWrap">
       <div class="modal-accent"></div>
 
-      <form id="proposalForm" action="https://formspree.io/f/info@hornmarkdesign.com" method="POST" enctype="multipart/form-data">
+      <!-- Formspree global success / error banners -->
+      <div data-fs-success class="modal-success">
+        <div class="success-icon"><i class="fa fa-check"></i></div>
+        <h3>Request Received!</h3>
+        <p>Thank you for your request. Our technical team will review your project information and contact you within <strong>2–3 business days.</strong></p>
+        <button onclick="closeProposalModal()" class="btn btn-primary" style="margin:0 auto;">
+          <i class="fa fa-times"></i> Close
+        </button>
+      </div>
+      <div data-fs-error style="display:none; background:#fff0f0; border:1px solid #f5c6cb; border-radius:6px; padding:12px 16px; margin-bottom:16px; color:#721c24; font-size:13px;"></div>
+
+      <form id="proposalForm">
 
         <div class="form-row">
           <div class="form-group">
             <label for="pf-name">Full Name <span>*</span></label>
-            <input type="text" id="pf-name" name="full_name" placeholder="Your full name" required>
+            <input type="text" id="pf-name" name="full_name" placeholder="Your full name" required data-fs-field>
+            <span data-fs-error="full_name" style="color:#c0392b;font-size:12px;"></span>
           </div>
           <div class="form-group">
             <label for="pf-org">Organisation / Company</label>
-            <input type="text" id="pf-org" name="organisation" placeholder="Company or institution">
+            <input type="text" id="pf-org" name="organisation" placeholder="Company or institution" data-fs-field>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
             <label for="pf-email">Email Address <span>*</span></label>
-            <input type="email" id="pf-email" name="email" placeholder="you@example.com" required>
+            <input type="email" id="pf-email" name="email" placeholder="you@example.com" required data-fs-field>
+            <span data-fs-error="email" style="color:#c0392b;font-size:12px;"></span>
           </div>
           <div class="form-group">
             <label for="pf-phone">Phone Number</label>
-            <input type="tel" id="pf-phone" name="phone" placeholder="+252 6X XXX XXXX">
+            <input type="tel" id="pf-phone" name="phone" placeholder="+252 6X XXX XXXX" data-fs-field>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
             <label for="pf-service">Service Required <span>*</span></label>
-            <select id="pf-service" name="service_required" required>
+            <select id="pf-service" name="service_required" required data-fs-field>
               <option value="" disabled selected>Select a service…</option>
               <option>Engineering Consultancy</option>
               <option>Environmental &amp; Social Assessment</option>
@@ -1898,26 +1910,29 @@ a.service-card:hover .service-learn {
               <option>BIM &amp; Digital Engineering</option>
               <option>Multiple / Other</option>
             </select>
+            <span data-fs-error="service_required" style="color:#c0392b;font-size:12px;"></span>
           </div>
           <div class="form-group">
             <label for="pf-location">Project Location <span>*</span></label>
-            <input type="text" id="pf-location" name="project_location" placeholder="City, Region, Country" required>
+            <input type="text" id="pf-location" name="project_location" placeholder="City, Region, Country" required data-fs-field>
+            <span data-fs-error="project_location" style="color:#c0392b;font-size:12px;"></span>
           </div>
         </div>
 
         <div class="form-group">
           <label for="pf-desc">Brief Project Description <span>*</span></label>
-          <textarea id="pf-desc" name="project_description" placeholder="Describe your project, objectives, and any specific requirements…" required></textarea>
+          <textarea id="pf-desc" name="project_description" placeholder="Describe your project, objectives, and any specific requirements…" required data-fs-field></textarea>
+          <span data-fs-error="project_description" style="color:#c0392b;font-size:12px;"></span>
         </div>
 
         <div class="form-row">
           <div class="form-group">
             <label for="pf-start">Expected Start Date</label>
-            <input type="date" id="pf-start" name="expected_start_date">
+            <input type="date" id="pf-start" name="expected_start_date" data-fs-field>
           </div>
           <div class="form-group">
             <label for="pf-budget">Estimated Budget (USD)</label>
-            <input type="text" id="pf-budget" name="estimated_budget" placeholder="e.g. $50,000 – $100,000">
+            <input type="text" id="pf-budget" name="estimated_budget" placeholder="e.g. $50,000 – $100,000" data-fs-field>
           </div>
         </div>
 
@@ -1927,30 +1942,23 @@ a.service-card:hover .service-learn {
           <span class="file-hint">TOR, drawings, BOQ, or project brief — PDF, Word, Excel, DWG, images (max 10 MB)</span>
         </div>
 
-        <!-- Hidden field so email subject is meaningful -->
         <input type="hidden" name="_subject" value="New Proposal Request — Horn Mark Design">
 
-        <button type="submit" class="modal-submit">
+        <button type="submit" class="modal-submit" data-fs-submit-btn>
           <i class="fa fa-paper-plane"></i> Submit Proposal Request
         </button>
 
       </form>
     </div>
 
-    <!-- Success view (shown after submit) -->
-    <div class="modal-success" id="proposalSuccess">
-      <div class="success-icon"><i class="fa fa-check"></i></div>
-      <h3>Request Received!</h3>
-      <p>Thank you for your request. Our technical team will review your project information and contact you within <strong>2–3 business days.</strong></p>
-      <button onclick="closeProposalModal()" class="btn btn-primary" style="margin:0 auto;">
-        <i class="fa fa-times"></i> Close
-      </button>
-    </div>
-
   </div>
 </div>
 
 <script>
+  // Formspree Vanilla JS (Ajax) CDN integration
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#proposalForm', formId: 'xaqgqoqq' });
+
   function openProposalModal() {
     document.getElementById('proposalModal').classList.add('open');
     document.body.style.overflow = 'hidden';
@@ -1959,10 +1967,7 @@ a.service-card:hover .service-learn {
   function closeProposalModal() {
     document.getElementById('proposalModal').classList.remove('open');
     document.body.style.overflow = '';
-    // Reset form and views on close
     setTimeout(() => {
-      document.getElementById('proposalFormWrap').style.display = '';
-      document.getElementById('proposalSuccess').classList.remove('show');
       document.getElementById('proposalForm').reset();
     }, 300);
   }
@@ -1976,37 +1981,8 @@ a.service-card:hover .service-learn {
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeProposalModal();
   });
-
-  // Handle form submission via Formspree AJAX
-  document.getElementById('proposalForm').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const btn = this.querySelector('.modal-submit');
-    btn.disabled = true;
-    btn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Sending…';
-
-    try {
-      const data = new FormData(this);
-      const res  = await fetch(this.action, {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (res.ok) {
-        document.getElementById('proposalFormWrap').style.display = 'none';
-        document.getElementById('proposalSuccess').classList.add('show');
-      } else {
-        btn.disabled = false;
-        btn.innerHTML = '<i class="fa fa-paper-plane"></i> Submit Proposal Request';
-        alert('Something went wrong. Please try again or email us directly at info@hornmarkdesign.com');
-      }
-    } catch {
-      btn.disabled = false;
-      btn.innerHTML = '<i class="fa fa-paper-plane"></i> Submit Proposal Request';
-      alert('Network error. Please check your connection and try again.');
-    }
-  });
 </script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 </body>
 </html>
