@@ -2037,7 +2037,10 @@ a.service-card:hover .service-learn {
       btn.disabled = false;
       btn.innerHTML = '<i class="fa fa-paper-plane"></i> Submit Proposal Request';
       errBox.style.display = 'block';
-      errBox.textContent = err.message || 'Something went wrong. Please email us at info@hornmark.net';
+      var isNetworkErr = (err instanceof TypeError);
+      errBox.textContent = isNetworkErr
+        ? 'Network error — please ensure you are viewing the live site (not a local file) and try again. Or email us at info@hornmark.net'
+        : (err.message || 'Something went wrong. Please email us at info@hornmark.net');
     });
   });
 </script>
