@@ -425,9 +425,10 @@ document.querySelectorAll('.main-nav .dropdown>a').forEach(l=>l.addEventListener
           <div class="form-group"><label for="pf-budget">Estimated Budget (USD)</label><input type="text" id="pf-budget" name="estimated_budget" placeholder="e.g. $50,000 – $100,000"></div>
         </div>
         <div class="form-group">
-          <label for="pf-file">Upload Documents</label>
-          <input type="file" id="pf-file" name="attachment" accept=".pdf,.doc,.docx,.xls,.xlsx,.dwg,.png,.jpg,.zip">
-          <span class="file-hint">TOR, drawings, BOQ, or project brief — PDF, Word, Excel, DWG, images (max 10 MB)</span>
+          <div style="background:#f0f4ff;border-left:4px solid #1B2F5E;border-radius:0 6px 6px 0;padding:12px 16px;font-size:13px;color:#444;line-height:1.6;">
+            <i class="fa fa-paperclip" style="margin-right:6px;color:#1B2F5E;"></i>
+            To attach documents, email them to <a href="mailto:info@hornmark.net" style="color:#2E7D32;font-weight:600;">info@hornmark.net</a> with your project name in the subject line.
+          </div>
         </div>
         <input type="hidden" name="_subject" value="New Proposal Request — Horn Mark Design">
         <button type="submit" id="pf-submit" class="modal-submit"><i class="fa fa-paper-plane"></i> Submit Proposal Request</button>
@@ -474,6 +475,7 @@ document.querySelectorAll('.main-nav .dropdown>a').forEach(l=>l.addEventListener
 </script>
 </body>
 </html>
+
 
 
 
