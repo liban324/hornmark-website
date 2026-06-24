@@ -1047,6 +1047,189 @@ a.service-card:hover .service-learn {
   .stat-card { padding: 8px 12px; }
   .sectors-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ============================================================
+   PROPOSAL MODAL
+   ============================================================ */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(18,32,64,0.72);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal-overlay.open { display: flex; }
+
+.modal {
+  background: var(--white);
+  border-radius: 12px;
+  width: 100%;
+  max-width: 680px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 64px rgba(18,32,64,0.3);
+  display: flex;
+  flex-direction: column;
+}
+.modal-header {
+  background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+  color: var(--white);
+  padding: 28px 32px 24px;
+  border-radius: 12px 12px 0 0;
+  position: relative;
+  flex-shrink: 0;
+}
+.modal-header h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 4px;
+  color: var(--white);
+}
+.modal-header p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.75);
+  margin: 0;
+}
+.modal-header .modal-close {
+  position: absolute;
+  top: 20px; right: 24px;
+  background: rgba(255,255,255,0.12);
+  border: none;
+  color: var(--white);
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: var(--transition);
+}
+.modal-header .modal-close:hover { background: rgba(255,255,255,0.25); }
+
+.modal-body { padding: 28px 32px 32px; }
+
+.modal-accent {
+  width: 40px; height: 3px;
+  background: linear-gradient(90deg, var(--navy), var(--green));
+  border-radius: 2px;
+  margin-bottom: 24px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.form-group.full { grid-column: 1 / -1; }
+.form-group label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+.form-group label span { color: var(--green); }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid #dce3ed;
+  border-radius: var(--radius);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: var(--text-dark);
+  background: var(--white);
+  transition: var(--transition);
+  outline: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(27,47,94,0.08);
+}
+.form-group textarea { resize: vertical; min-height: 100px; }
+.form-group input[type="file"] {
+  padding: 8px 14px;
+  background: var(--gray-light);
+  cursor: pointer;
+  font-size: 13px;
+}
+.file-hint {
+  font-size: 11px;
+  color: var(--gray-mid);
+  margin-top: 2px;
+}
+
+.modal-submit {
+  width: 100%;
+  padding: 14px;
+  background: var(--green);
+  color: var(--white);
+  border: none;
+  border-radius: var(--radius);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.modal-submit:hover {
+  background: var(--green-light);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(46,125,50,0.3);
+}
+
+.modal-success {
+  display: none;
+  text-align: center;
+  padding: 48px 32px;
+}
+.modal-success.show { display: block; }
+.modal-success .success-icon {
+  width: 72px; height: 72px;
+  background: linear-gradient(135deg, var(--green), var(--green-light));
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 24px;
+}
+.modal-success .success-icon i { font-size: 32px; color: var(--white); }
+.modal-success h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+.modal-success p {
+  font-size: 15px;
+  color: var(--text-body);
+  line-height: 1.7;
+  max-width: 420px;
+  margin: 0 auto 28px;
+}
+
+@media (max-width: 600px) {
+  .modal-body { padding: 20px; }
+  .modal-header { padding: 20px; }
+  .form-row { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 
@@ -1103,7 +1286,7 @@ a.service-card:hover .service-learn {
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <a href="#contact" class="btn btn-primary nav-cta">Get In Touch</a>
+      <button onclick="openProposalModal()" class="btn btn-primary nav-cta"><i class="fa fa-file-text-o"></i> Request a Proposal</button>
     </div>
   </div>
 </header>
@@ -1559,8 +1742,8 @@ a.service-card:hover .service-learn {
     <h2>Ready to Start Your Project?</h2>
     <p>At Horn Mark Design Consultant Ltd., we are committed to delivering innovative engineering solutions and professional project management services across Somalia and the Horn of Africa.</p>
     <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-      <a href="#contact" class="btn btn-outline"><i class="fa fa-envelope"></i> Contact Us Today</a>
-      <a href="#services" class="btn" style="background:var(--navy); color:#fff; border-color:var(--navy);"><i class="fa fa-cogs"></i> View Our Services</a>
+      <button onclick="openProposalModal()" class="btn btn-outline"><i class="fa fa-file-text-o"></i> Request a Proposal</button>
+      <a href="#contact" class="btn" style="background:var(--navy); color:#fff; border-color:var(--navy);"><i class="fa fa-envelope"></i> Contact Us</a>
     </div>
   </div>
 </section>
@@ -1658,6 +1841,170 @@ a.service-card:hover .service-learn {
       a.parentElement.classList.remove('active');
       if (a.getAttribute('href') === '#' + current) a.parentElement.classList.add('active');
     });
+  });
+</script>
+
+<!-- ============================================================
+     PROPOSAL REQUEST MODAL
+     ============================================================ -->
+<div class="modal-overlay" id="proposalModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+
+    <div class="modal-header">
+      <h2 id="modalTitle"><i class="fa fa-file-text-o" style="margin-right:10px;color:var(--green-light);"></i>Request a Proposal</h2>
+      <p>Submit your project details and we'll prepare a tailored technical &amp; financial proposal.</p>
+      <button class="modal-close" onclick="closeProposalModal()" aria-label="Close">&times;</button>
+    </div>
+
+    <!-- Form view -->
+    <div class="modal-body" id="proposalFormWrap">
+      <div class="modal-accent"></div>
+
+      <form id="proposalForm" action="https://formspree.io/f/info@hornmarkdesign.com" method="POST" enctype="multipart/form-data">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="pf-name">Full Name <span>*</span></label>
+            <input type="text" id="pf-name" name="full_name" placeholder="Your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="pf-org">Organisation / Company</label>
+            <input type="text" id="pf-org" name="organisation" placeholder="Company or institution">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="pf-email">Email Address <span>*</span></label>
+            <input type="email" id="pf-email" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="pf-phone">Phone Number</label>
+            <input type="tel" id="pf-phone" name="phone" placeholder="+252 6X XXX XXXX">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="pf-service">Service Required <span>*</span></label>
+            <select id="pf-service" name="service_required" required>
+              <option value="" disabled selected>Select a service…</option>
+              <option>Engineering Consultancy</option>
+              <option>Environmental &amp; Social Assessment</option>
+              <option>Construction Management</option>
+              <option>Project Management</option>
+              <option>Monitoring, Evaluation &amp; Learning</option>
+              <option>Risk Assessment &amp; Management</option>
+              <option>BIM &amp; Digital Engineering</option>
+              <option>Multiple / Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="pf-location">Project Location <span>*</span></label>
+            <input type="text" id="pf-location" name="project_location" placeholder="City, Region, Country" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="pf-desc">Brief Project Description <span>*</span></label>
+          <textarea id="pf-desc" name="project_description" placeholder="Describe your project, objectives, and any specific requirements…" required></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="pf-start">Expected Start Date</label>
+            <input type="date" id="pf-start" name="expected_start_date">
+          </div>
+          <div class="form-group">
+            <label for="pf-budget">Estimated Budget (USD)</label>
+            <input type="text" id="pf-budget" name="estimated_budget" placeholder="e.g. $50,000 – $100,000">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="pf-file">Upload Documents</label>
+          <input type="file" id="pf-file" name="attachment" accept=".pdf,.doc,.docx,.xls,.xlsx,.dwg,.png,.jpg,.zip">
+          <span class="file-hint">TOR, drawings, BOQ, or project brief — PDF, Word, Excel, DWG, images (max 10 MB)</span>
+        </div>
+
+        <!-- Hidden field so email subject is meaningful -->
+        <input type="hidden" name="_subject" value="New Proposal Request — Horn Mark Design">
+
+        <button type="submit" class="modal-submit">
+          <i class="fa fa-paper-plane"></i> Submit Proposal Request
+        </button>
+
+      </form>
+    </div>
+
+    <!-- Success view (shown after submit) -->
+    <div class="modal-success" id="proposalSuccess">
+      <div class="success-icon"><i class="fa fa-check"></i></div>
+      <h3>Request Received!</h3>
+      <p>Thank you for your request. Our technical team will review your project information and contact you within <strong>2–3 business days.</strong></p>
+      <button onclick="closeProposalModal()" class="btn btn-primary" style="margin:0 auto;">
+        <i class="fa fa-times"></i> Close
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function openProposalModal() {
+    document.getElementById('proposalModal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeProposalModal() {
+    document.getElementById('proposalModal').classList.remove('open');
+    document.body.style.overflow = '';
+    // Reset form and views on close
+    setTimeout(() => {
+      document.getElementById('proposalFormWrap').style.display = '';
+      document.getElementById('proposalSuccess').classList.remove('show');
+      document.getElementById('proposalForm').reset();
+    }, 300);
+  }
+
+  // Close on overlay click
+  document.getElementById('proposalModal').addEventListener('click', function(e) {
+    if (e.target === this) closeProposalModal();
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeProposalModal();
+  });
+
+  // Handle form submission via Formspree AJAX
+  document.getElementById('proposalForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('.modal-submit');
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa fa-spinner fa-spin"></i> Sending…';
+
+    try {
+      const data = new FormData(this);
+      const res  = await fetch(this.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        document.getElementById('proposalFormWrap').style.display = 'none';
+        document.getElementById('proposalSuccess').classList.add('show');
+      } else {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fa fa-paper-plane"></i> Submit Proposal Request';
+        alert('Something went wrong. Please try again or email us directly at info@hornmarkdesign.com');
+      }
+    } catch {
+      btn.disabled = false;
+      btn.innerHTML = '<i class="fa fa-paper-plane"></i> Submit Proposal Request';
+      alert('Network error. Please check your connection and try again.');
+    }
   });
 </script>
 
