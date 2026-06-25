@@ -136,6 +136,17 @@ ul { list-style: none; }
 .modal-submit:hover { background: var(--green-light); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(46,125,50,0.3); }
 
 /* ============================================================
+   PROJECTS
+   ============================================================ */
+.projects { background: var(--white); }
+.projects-intro { max-width: 780px; margin: 0 auto 48px; text-align: center; }
+.projects-intro p { font-size: 16px; color: var(--text-body); line-height: 1.8; margin-bottom: 16px; }
+.projects-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.project-img { width: 100%; height: 300px; object-fit: cover; border-radius: 12px; box-shadow: var(--shadow-sm); transition: var(--transition); display: block; }
+.project-img:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+@media (max-width: 640px) { .projects-grid { grid-template-columns: 1fr; } }
+
+/* ============================================================
    RESPONSIVE
    ============================================================ */
 @media (max-width: 768px) {
@@ -212,8 +223,29 @@ ul { list-style: none; }
 </header>
 
 <!-- ============================================================
-     MAIN CONTENT — add project sections here
+     PROJECTS
      ============================================================ -->
+<section class="projects section-pad" id="projects">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:48px;">
+      <span class="section-tag">Our Work</span>
+      <h2 class="section-title" style="max-width:560px; margin:0 auto 16px;">Residential Design &amp; Build</h2>
+      <div class="divider" style="margin:0 auto 24px;"></div>
+    </div>
+    <div class="projects-intro">
+      <p>At Horn Mark Consultant, we believe every home should reflect the people who live in it. Our Residential Design &amp; Build team works closely with each client to understand their vision, lifestyle, family needs, and future aspirations before transforming those ideas into practical, elegant, and sustainable living spaces.</p>
+      <p>From concept development and architectural planning to structural engineering, detailed design, and construction supervision, we deliver tailored solutions that balance aesthetics, functionality, quality, and value. Every project is carefully planned to optimize space, control costs, meet schedules, and achieve the highest standards of craftsmanship.</p>
+      <p>Our multidisciplinary team combines technical expertise with creative design to deliver homes that are not only beautiful but also safe, durable, energy-efficient, and built to stand the test of time.</p>
+      <p>Whether you are building your dream home, renovating an existing residence, or developing a luxury housing project, Horn Mark Consultant is your trusted partner from concept to completion.</p>
+    </div>
+    <div class="projects-grid">
+      <img src="Projects/images 1.webp" alt="Residential Project 1" class="project-img">
+      <img src="Projects/images 2.webp" alt="Residential Project 2" class="project-img">
+      <img src="Projects/images 3.webp" alt="Residential Project 3" class="project-img">
+      <img src="Projects/images 4.webp" alt="Residential Project 4" class="project-img">
+    </div>
+  </div>
+</section>
 
 
 <!-- FOOTER -->
