@@ -1302,6 +1302,11 @@ a.service-card:hover .service-learn {
   .modal-header { padding: 20px; }
   .form-row { grid-template-columns: 1fr; }
 }
+.client-banner{display:block;position:static;width:100%;background:var(--navy);border-top:3px solid var(--green);padding:13px 0;box-sizing:border-box;overflow:hidden}
+.client-banner .container{display:flex;align-items:center;justify-content:center;gap:8px 14px;flex-wrap:wrap}
+.client-banner-text{font-size:13px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;color:rgba(255,255,255,.88);white-space:nowrap}
+.client-banner-sep{color:var(--green-light);font-size:13px;line-height:1;flex-shrink:0}
+@media(max-width:480px){.client-banner{padding:10px 0}.client-banner-text{font-size:11.5px;letter-spacing:1.2px}.client-banner-sep{font-size:10px}}
 </style>
 </head>
 
