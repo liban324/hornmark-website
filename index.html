@@ -270,17 +270,15 @@ ul { list-style: none; }
    HERO
    ============================================================ */
 .hero {
-  background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, #1f4a7a 100%);
+  background: linear-gradient(135deg, rgba(18,32,64,0.78) 0%, rgba(27,47,94,0.68) 60%, rgba(31,74,122,0.62) 100%),
+              url('img01.jpeg') center/cover no-repeat;
   color: var(--white);
   padding: 120px 0 100px;
   position: relative;
   overflow: hidden;
 }
 .hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><circle cx="600" cy="100" r="300" fill="rgba(46,125,50,0.08)"/><circle cx="100" cy="500" r="200" fill="rgba(255,255,255,0.03)"/></svg>') no-repeat center/cover;
+  content: none;
 }
 .hero .container { position: relative; z-index: 1; }
 .hero-grid {
@@ -1169,7 +1167,7 @@ ul { list-style: none; }
       </div>
       <div class="hero-visual">
         <div class="hero-photo-wrap">
-          <img src="img01.jpeg" alt="HMD team on site in Mogadishu" class="hero-photo">
+          <img src="on the ground in mogadishu.webp" alt="HMD team on site in Mogadishu" class="hero-photo">
           <div class="hero-photo-caption">
             <i class="fa fa-map-marker"></i> On the ground in Mogadishu, Somalia
           </div>
