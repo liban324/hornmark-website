@@ -24,9 +24,12 @@
 .main-nav{display:flex;align-items:center;gap:4px}.main-nav>li{position:relative;z-index:1}.main-nav>li>a{display:block;padding:10px 16px;font-weight:600;font-size:14px;color:var(--text-dark);border-radius:var(--radius);transition:var(--transition)}.main-nav>li>a:hover,.main-nav>li.active>a{color:var(--green);background:rgba(46,125,50,.07)}.main-nav>li>a i{margin-right:4px;font-size:12px}
 .main-nav .dropdown-menu{display:none;position:absolute;top:100%;left:0;min-width:240px;background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow-md);padding:8px 0;border-top:3px solid var(--green);z-index:100}.main-nav .dropdown::before{content:'';position:absolute;top:100%;left:0;width:100%;height:12px;background:transparent;}.main-nav .dropdown:hover .dropdown-menu{display:block}.main-nav .dropdown-menu li a{display:block;padding:10px 20px;font-size:14px;color:var(--text-dark);transition:var(--transition)}.main-nav .dropdown-menu li a:hover,.main-nav .dropdown-menu li a.active-sub{color:var(--green);background:var(--gray-light);padding-left:26px}
 .nav-cta{margin-left:16px}.nav-toggle{display:none;background:none;border:none;font-size:22px;color:var(--navy);cursor:pointer}
-.page-hero{background:url('project-management-service.jpeg') center/cover no-repeat;color:var(--white);padding:80px 0 70px;position:relative;overflow:hidden}
-.page-hero::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.55)}
-.page-hero .container{position:relative;z-index:1}
+.page-hero{color:var(--white);padding:80px 0 70px;position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,0.55);z-index:1}
+.page-hero .container{position:relative;z-index:2}
+.hero-bg-carousel{position:absolute;inset:0;z-index:0}
+.hero-bg-slide{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat;opacity:0;transition:opacity 1.5s ease-in-out}
+.hero-bg-slide.active{opacity:1}
 .breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.6);margin-bottom:20px}.breadcrumb a{color:rgba(255,255,255,.6)}.breadcrumb a:hover{color:var(--green-light)}.breadcrumb span{color:var(--green-light)}.breadcrumb i{font-size:10px}
 .page-hero h1{font-family:'Montserrat',sans-serif;font-size:clamp(28px,4vw,50px);font-weight:800;line-height:1.1;margin-bottom:20px}.page-hero h1 span{color:var(--green-light)}.page-hero p{font-size:17px;color:rgba(255,255,255,.82);max-width:620px;line-height:1.8;margin-bottom:32px}
 .hero-tag{display:inline-flex;align-items:center;gap:8px;background:rgba(46,125,50,.2);border:1px solid rgba(76,175,80,.4);color:var(--green-light);font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:20px}
@@ -103,6 +106,11 @@
 </div></div></header>
 
 <section class="page-hero">
+<div class="hero-bg-carousel">
+<div class="hero-bg-slide active" style="background-image: url('construction01.webp');"></div>
+<div class="hero-bg-slide" style="background-image: url('construction02.webp');"></div>
+<div class="hero-bg-slide" style="background-image: url('project-management-service.jpeg');"></div>
+</div>
 <div class="container">
 <div class="breadcrumb"><a href="index.html">Home</a><i class="fa fa-angle-right"></i><a href="index.html#services">Our Services</a><i class="fa fa-angle-right"></i><span>Project Management</span></div>
 <div class="hero-tag"><i class="fa fa-tasks"></i> Core Service</div>
@@ -178,6 +186,7 @@
 <div class="footer-bottom"><div class="container"><p>&copy; 2025 Horn Mark Engineering Services All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div></div></div>
 </footer>
 <script>const navToggle=document.getElementById('navToggle');const mainNav=document.getElementById('mainNav');navToggle.addEventListener('click',()=>mainNav.classList.toggle('open'));document.querySelectorAll('.main-nav .dropdown>a').forEach(l=>l.addEventListener('click',e=>{if(window.innerWidth<=768){e.preventDefault();l.parentElement.classList.toggle('open');}}));</script>
+<script>(function(){const slides=document.querySelectorAll('.hero-bg-slide');if(slides.length<2)return;let current=0;setInterval(()=>{slides[current].classList.remove('active');current=(current+1)%slides.length;slides[current].classList.add('active');},5000);})();</script>
 
 
 <div class="modal-overlay" id="proposalModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
