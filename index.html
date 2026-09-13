@@ -256,6 +256,21 @@ ul { list-style: none; }
   padding-left: 26px;
 }
 
+.location-menu { min-width: 280px; }
+.location-name {
+  padding: 10px 20px 4px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+}
+.location-name i { margin-right: 6px; color: var(--green); }
+.location-address {
+  padding: 0 20px 10px;
+  font-size: 13px;
+  color: var(--text-body);
+  line-height: 1.5;
+}
+
 .nav-cta { margin-left: 16px; }
 
 .nav-toggle {
@@ -1119,6 +1134,13 @@ ul { list-style: none; }
             </ul>
           </li>
           <li><a href="projects.html">Projects</a></li>
+          <li class="dropdown">
+            <a href="#contact">Location <i class="fa fa-angle-down"></i></a>
+            <ul class="dropdown-menu location-menu">
+              <li class="location-name"><i class="fa fa-map-marker"></i> Hornmark Engineering Services</li>
+              <li class="location-address">Office #24, Fureh Building, 26 June District, Hargeisa</li>
+            </ul>
+          </li>
           <li class="dropdown">
             <a href="careers.html">Careers <i class="fa fa-angle-down"></i></a>
             <ul class="dropdown-menu">
